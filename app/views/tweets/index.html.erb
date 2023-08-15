@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clon de Twitter</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <h1 class="mb-4">Tweets</h1>
+
+      <!-- Formulario de búsqueda -->
+      <%= form_tag search_tweets_path, method: :get, class: "form-inline my-2 my-lg-0" do %>
+        <%= text_field_tag :q, params[:q], placeholder: "Buscar tweets", class: "form-control mr-sm-2" %>
+        <%= submit_tag "Buscar", class: "btn btn-outline-success my-2 my-sm-0" %>
+      <% end %>
+
+      <!-- Lista de tweets -->
+      <div id="tweets" class="mt-4">
+        <% @tweets.each do |tweet| %>
+          <div class="card mb-3">
+            <div class="card-body">
+              <%= render tweet %>
+            </div>
+            <div class="card-footer text-muted">
+              <%= link_to "Show this tweet", tweet, class: "btn btn-sm btn-outline-primary" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+      <!-- Enlace para crear un nuevo tweet -->
+      <%= link_to "New tweet", new_tweet_path, class: "btn btn-primary mt-3" %>
+
+      <!-- Paginación -->
+      <%= will_paginate @tweets, class: "mt-4" %>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
