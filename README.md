@@ -27,15 +27,4 @@ heroku run rake db:migrate
 luego abrimos la app y la desplegamos 
 heroku open
 
- 
-Iniciar Sesión en Heroku desde la Línea de Comandos:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
