@@ -1,7 +1,7 @@
 <%= form_with(model: tweet) do |form| %>
   <% if tweet.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(tweet.errors.count, "error") %> prohibited this tweet from being saved:</h2>
+    <div style="color: red; margin-bottom: 20px;">
+      <h2><%= pluralize(tweet.errors.count, "Errorcito") %> Prohiben que estos twwts se publiquen </h2>
 
       <ul>
         <% tweet.errors.each do |error| %>
@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
+  <div style="margin-bottom: 20px;">
+    <%= form.label :description, style: "display: block; font-weight: bold;" %>
+    <%= form.text_area :description, style: "width: 80%; padding: 10px;" %>
+  </div>
+
+  <div style="margin-bottom: 20px;">
+    <%= form.label :user_name, style: "display: block; font-weight: bold;" %>
+    <%= form.text_field :user_name, style: "width: 80%; padding: 10px;" %>
   </div>
 
   <div>
-    <%= form.label :user_name, style: "display: block" %>
-    <%= form.text_field :user_name %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+    <%= form.submit style: "padding: 10px 20px; background-color: #007bff; color: white; border: none; cursor: pointer;" %>
   </div>
 <% end %>

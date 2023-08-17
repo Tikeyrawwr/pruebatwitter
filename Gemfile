@@ -35,6 +35,8 @@ gem 'sqlite3'
 
 gem 'rails_12factor', group: :production
 
+gem 'faker'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 

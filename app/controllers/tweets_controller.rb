@@ -77,6 +77,6 @@ end
 
     # Only allow a list of trusted parameters through.
     def tweet_params
-      params.require(:tweet).permit(:description, :user_name)
+      params.require(:tweet).permit(:description, :username)
     end
 end

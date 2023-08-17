@@ -13,7 +13,7 @@
 ActiveRecord::Schema[7.0].define(version: 2023_08_14_234558) do
   create_table "tweets", force: :cascade do |t|
     t.text "description"
-    t.string "user_name"
+    t.string "username", limit: 50
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

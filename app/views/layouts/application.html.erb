@@ -1,24 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>ClonDeTwitter</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>ClonDeTwitter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
 
-  <body>
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
 
-  <div>
-<h1> El twitter </h1>
-  
-  </div>
+    h1 {
+      margin-top: 0;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>El Twitter</h1>
     <%= yield %>
-  </body>
+  </div>
 
-  <h1> Ayrton valdivia </h1>
-  <p>2023 bootcamp desarrollo on rails </p>
+  <footer>
+    <h1>Ayrton Valdivia</h1>
+    <p>2023 Bootcamp Desarrollo en Rails</p>
+  </footer>
+</body>
 </html>

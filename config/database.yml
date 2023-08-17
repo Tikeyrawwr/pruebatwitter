@@ -6,3 +6,9 @@ default: &default
 development:
   <<: *default
   database: db/development.sqlite3
+
+production:
+  <<: *default
+  database: your_app_name_production
+  username: your_app_name
+  password: <%= ENV['YOUR_APP_DATABASE_PASSWORD'] %>
